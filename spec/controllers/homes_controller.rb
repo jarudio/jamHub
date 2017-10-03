@@ -11,6 +11,5 @@ describe HomesController do
     it 'renders the homes#index template' do
       expect(response).to render_template(:index)
     end
-    
   end
 end
