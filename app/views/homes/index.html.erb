@@ -1,5 +1,12 @@
 <ul>
   <li><%= link_to 'Home', root_path %></li>
+  <% if !user_signed_in? %>
+    <li><%= link_to 'Sign In', new_user_session_path %></li>
+    <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+  <% else  %>
+    <li> <%= link_to 'Profile', users_path(current_user) %></li>
+    <li> <%= link_to 'Log out', destroy_user_session %></li>
+  <% end %>
 </ul>
 <h1>jamHub</h1>
 <p>Hello World!</p>
