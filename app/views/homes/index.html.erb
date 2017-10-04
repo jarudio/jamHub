@@ -5,7 +5,7 @@
     <li><%= link_to 'Sign Up', new_user_registration_path %></li>
   <% else  %>
     <li> <%= link_to 'Profile', users_path(current_user) %></li>
-    <li> <%= link_to 'Log out', destroy_user_session %></li>
+    <li> <%= link_to 'Log out', destroy_user_session_path %></li>
   <% end %>
 </ul>
 <h1>jamHub</h1>
