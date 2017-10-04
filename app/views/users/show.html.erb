@@ -1,5 +1,8 @@
 <% if current_user == @user && !@user.first_name.present? %>
   <p>Looks like your profile is missing some information, click <%= link_to 'here', edit_user_path(@user) %> to update your profile </p>
 <% else %>
-  <%= "#{@user.first_name} #{@user.last_name}'s Profile" %>
+  <h1><%= "#{@user.first_name} #{@user.last_name}'s Profile" %></h1>
+  <p><%= "#{@user.city}, #{@user.state}" %></p>
+  <%= link_to 'Home', root_path %>
+  <%= link_to 'Account Settings', edit_user_registration_path(@user) %>
 <% end %>
